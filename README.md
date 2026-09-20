@@ -1,66 +1,73 @@
 # LibreMLOps-Grok-Build
 
-**MLOps / LLMOps skills for Grok Build** — ported and melted from [LibreMLOps-Claude-Code](https://github.com/HermeticOrmus/LibreMLOps-Claude-Code), not a dumb copy.
+**MLOps / LLMOps depth for [Grok Build](https://github.com/HermeticOrmus/grok-build-reality-os)** — ported and melted from [LibreMLOps-Claude-Code](https://github.com/HermeticOrmus/LibreMLOps-Claude-Code), not a dumb copy.
 
-> Status: **v0 public scaffold** — honest stubs. Melt depth next.
+> Status: **public v0** — three skills melted (`model-eval`, `feature-store-lite`, `experiment-track`); the rest are honest stubs. See [docs/DEPTH_MATRIX.md](./docs/DEPTH_MATRIX.md).
 
 ## Why this exists
 
-Models without ops rot. LibreMLOps owns experiments, eval, RAG, deploy, monitor — melted for Grok Build. Overlaps Reality OS carefully; honest stubs first.
+Models without ops rot. LibreMLOps owns the *job* of experiments, eval, features, RAG, deploy, monitor — melted for Grok Build. This repo counts only what it has melted. Overlaps Reality OS carefully.
 
 ## Install (<5 min)
 
-See [QUICK_START.md](./QUICK_START.md).
+See [QUICK_START.md](./QUICK_START.md) for clone, dogfood, project-local, and user-global paths.
 
 ```bash
-mkdir -p .grok/skills
-cp -R skills/* .grok/skills/
+git clone https://github.com/HermeticOrmus/LibreMLOps-Grok-Build.git
+cd LibreMLOps-Grok-Build
+# Dogfood: .grok/skills/ already has the skill bodies.
+# Other project: cp -R skills/* /path/to/your-ml-project/.grok/skills/
 ```
 
-Doctrine: install [grok-build-reality-os](https://github.com/HermeticOrmus/grok-build-reality-os) `AGENTS.md` on the machine first.
+Doctrine: install [grok-build-reality-os](https://github.com/HermeticOrmus/grok-build-reality-os) `AGENTS.md` on the machine first. Do not replace it with this pack.
 
-## Depth matrix (honest)
+## Depth (honest)
 
-| Artifact | v0 scaffold | Upstream Claude (proof) |
-|----------|-------------|-------------------------|
-| Skills (melted bodies) | 8 stubs → fill next | see upstream suite |
-| Agents | 1 (`mlops-orchestrator`) | upstream agents |
+| Artifact | This repo now | Upstream Claude |
+|----------|---------------|-----------------|
+| Skills | 3 melted + 5 stubs | Proof the job exists; not our inventory |
+| Agents | 1 stub (`mlops-orchestrator`) | Proof the job exists; not our inventory |
+| Plugins | 1 core bundle stub | Proof the job exists; not our inventory |
 
-Counts on the right are **upstream proof**, not this repo's claim until melted.
+Do not paste Claude plugin/agent/command totals here. Update [docs/DEPTH_MATRIX.md](./docs/DEPTH_MATRIX.md) when something melts.
 
-## First skills
+## Skills
 
-| Skill | Job |
-|-------|-----|
-| experiment-track | Experiment tracking: params, metrics, artifacts, lineage |
-| model-eval | Offline/online eval harness — metrics, slices, gates |
-| rag-architecture | RAG design: chunking, embeddings, retrieval, citation, eval |
-| model-deploy | Deploy patterns: batch vs online, canary, rollback |
-| data-pipeline | Data pipeline hygiene: schema, validation, versioning |
-| model-monitor | Drift, latency, quality SLOs — alert without panic |
-| prompt-eval | Prompt/LLM eval: fixtures, rubrics, regression suites |
-| feature-store-lite | Lightweight feature store cues: freshness, joins, training-serving skew |
+| Skill | Status | Job |
+|-------|--------|-----|
+| experiment-track | melted | Run card: params, artifacts, lineage |
+| model-eval | melted | Eval card: metrics, slices, gates |
+| feature-store-lite | melted | Train/serve checklist: freshness, joins, skew |
+| rag-architecture | stub | Chunking, retrieval, citation, eval |
+| model-deploy | stub | Batch vs online, canary, rollback |
+| data-pipeline | stub | Schema, validation, versioning |
+| model-monitor | stub | Drift, latency, quality SLOs |
+| prompt-eval | stub | Fixtures, rubrics, regression suites |
 
-Agent: `AGENTS/mlops-orchestrator.md` — full suite pass.
+Agent: `AGENTS/mlops-orchestrator.md` — stub coordinator for a multi-skill pass.
 
 ## Layout (Grok Build)
 
 ```
-skills/                 # install into .grok/skills or ~/.grok/skills
+skills/                 # canonical SKILL.md bodies
 AGENTS/                 # suite agents
-.grok/plugins/          # optional plugin bundle
 docs/                   # DEPTH_MATRIX, MELT_RULES
+.grok/skills/           # dogfood copy of skills/ (keep in sync)
+.grok/plugins/          # optional plugin bundle stub
 ```
+
+Claude's `.claude/` maps to Grok skills + `AGENTS.md` + `.grok/`. Melt rules: [docs/MELT_RULES.md](./docs/MELT_RULES.md).
 
 ## Gold Hat
 
-[GOLD_HAT.md](./GOLD_HAT.md) — empower or extract?
+[GOLD_HAT.md](./GOLD_HAT.md) — empower or extract? No invented metrics.
 
 ## Suite
 
 - Doctrine: [grok-build-reality-os](https://github.com/HermeticOrmus/grok-build-reality-os)
-- Sibling: [LibreUIUX-Grok-Build](https://github.com/HermeticOrmus/LibreUIUX-Grok-Build) · [LibreSessionFlow-Grok-Build](https://github.com/HermeticOrmus/LibreSessionFlow-Grok-Build) · [LibreGEO-Grok-Build](https://github.com/HermeticOrmus/LibreGEO-Grok-Build)
-- Skills packs: [grok-skills](https://github.com/HermeticOrmus/grok-skills) · [grok-build-skills](https://github.com/HermeticOrmus/grok-build-skills)
+- This pack: [LibreMLOps-Grok-Build](https://github.com/HermeticOrmus/LibreMLOps-Grok-Build)
+- Sibling Libre*-Grok-Build packs: [Arch](https://github.com/HermeticOrmus/LibreArch-Grok-Build) · [Copy](https://github.com/HermeticOrmus/LibreCopy-Grok-Build) · [DevOps](https://github.com/HermeticOrmus/LibreDevOps-Grok-Build) · [Embed](https://github.com/HermeticOrmus/LibreEmbed-Grok-Build) · [FinTech](https://github.com/HermeticOrmus/LibreFinTech-Grok-Build) · [GameDev](https://github.com/HermeticOrmus/LibreGameDev-Grok-Build) · [GEO](https://github.com/HermeticOrmus/LibreGEO-Grok-Build) · [MLOps](https://github.com/HermeticOrmus/LibreMLOps-Grok-Build) · [MobileDev](https://github.com/HermeticOrmus/LibreMobileDev-Grok-Build) · [SecOps](https://github.com/HermeticOrmus/LibreSecOps-Grok-Build) · [SessionFlow](https://github.com/HermeticOrmus/LibreSessionFlow-Grok-Build) · [WhatsApp](https://github.com/HermeticOrmus/LibreWhatsApp-Grok-Build)
+- Skills collections: [grok-skills](https://github.com/HermeticOrmus/grok-skills) · [grok-build-skills](https://github.com/HermeticOrmus/grok-build-skills)
 - Claude proof: [LibreMLOps-Claude-Code](https://github.com/HermeticOrmus/LibreMLOps-Claude-Code)
 - https://ormus.solutions
 
