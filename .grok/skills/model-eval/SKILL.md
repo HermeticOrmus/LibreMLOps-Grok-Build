@@ -27,7 +27,7 @@ Do not invent a quality score, an AUC, a lift, or a "statistically significant" 
 3. **Walk the card fields below.** For each: what you have, what is missing, measured vs unverified.
 4. **Call promote, reject, or hold.** Hold is valid. "Looks fine" is not a call.
 5. **Teach one sentence** — why this metric and this gate, reusable on the next candidate.
-6. **Hand off leftovers** to the matching stub (`model-monitor`, `prompt-eval`, `experiment-track` if lineage is unnamed) instead of writing a fake full harness.
+6. **Hand off leftovers.** Unnamed lineage → `experiment-track` (melted). Monitoring / prompt fixtures / RAG cite → matching stubs. Do not write a fake full harness.
 
 ## Eval card fields
 
@@ -159,7 +159,7 @@ If the positive is rare, accuracy is a base-rate echo until you lock a
 metric that can fail.
 
 ## Leftovers
-Lineage of r17 → `experiment-track` (stub). Live drift after promote →
+Lineage of r17 → `experiment-track` (melted). Live drift after promote →
 `model-monitor` (stub). Train/serve parity on the churn features →
 `feature-store-lite` (melted).
 ```
