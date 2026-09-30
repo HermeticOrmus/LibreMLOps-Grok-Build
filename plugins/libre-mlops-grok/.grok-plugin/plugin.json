@@ -1,0 +1,11 @@
+{
+  "name": "libre-mlops-grok",
+  "version": "1.0.0",
+  "description": "Grok-native LibreMLOps skills: an experiment run card, a model eval card with a promote, reject or hold call, and a train/serve feature checklist. Each has measurable checks, a worked example, and an output shape, and marks any number it did not compute as unverified.",
+  "author": {
+    "name": "Diego Bodart",
+    "url": "https://github.com/HermeticOrmus"
+  },
+  "repository": "https://github.com/HermeticOrmus/LibreMLOps-Grok-Build",
+  "license": "MIT"
+}
