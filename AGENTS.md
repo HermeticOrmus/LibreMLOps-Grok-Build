@@ -7,7 +7,7 @@
 
 ## How to use this suite
 
-1. Install skills (see [QUICK_START.md](./QUICK_START.md)).
+1. Install the `libre-mlops-grok` plugin, plus the pack plugins you need, from this repo's marketplace (see [QUICK_START.md](./QUICK_START.md)).
 2. Keep Reality OS as the global doctrine layer.
 3. Use suite skills for MLOps; use `AGENTS/mlops-orchestrator.md` when a full pass is needed.
 
@@ -23,7 +23,7 @@ Project-level `AGENTS.md` in a consumer repo wins for project rules; this file i
 
 Recognize gold in LibreMLOps-Claude-Code → strip Claude residue → integrate with Grok skills / `.grok/` / MCP → dogfood.
 
-Melted in this pack: `model-eval`, `feature-store-lite`, `experiment-track`. The other five skills and this orchestrator remain stubs. Honest counts: [docs/DEPTH_MATRIX.md](./docs/DEPTH_MATRIX.md). No invented metrics.
+Melted in this pack: `model-eval`, `feature-store-lite`, `experiment-track`, shipped as the `libre-mlops-grok` plugin. The other five skills remain stubs in [stubs/](./stubs/), each naming the pack plugin with the real depth, and this orchestrator remains a stub that nothing installs. Honest counts: [docs/DEPTH_MATRIX.md](./docs/DEPTH_MATRIX.md). No invented metrics.
 
 ## Suite
 
